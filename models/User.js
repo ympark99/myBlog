@@ -47,6 +47,8 @@ userSchema.pre('save',function(next){ // 저장 전 메소드
                 next()
             });
         });
+    } else{
+        next()
     }
 })
 
