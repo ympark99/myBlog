@@ -62,7 +62,7 @@ userSchema.methods.comparePassword = function(plainPassword, cb) {
     })
 }
 
-// 토근 생성 메소드
+// 토큰 생성 메소드
 userSchema.methods.generateToken = function(cb){
     
     var user = this;
@@ -79,6 +79,27 @@ userSchema.methods.generateToken = function(cb){
         cb(null, user) // user에 토큰 저장
     })
 }
+
+userSchema.statics.findByToken = function(token, cb){
+
+    var user = this;
+
+
+    // user._id + '' = token
+    // 토큰을 decode
+    jwt.verify(token, 'secretToken', function(err,decoded){
+        // 유제 id 이용해서 유저를 찾은 다음
+        // client의 token과 db에 보관된 토큰 일치하는지 확인
+    })
+
+    user.findOne({"_id": decoded, "token": token}, function(err, user){
+        if(err) return cb(err);
+        cb(null,user)
+    })
+
+}
+
+
 
 
 
