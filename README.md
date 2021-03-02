@@ -1,8 +1,8 @@
 # Blog by Nodejs, React, MongoDB
 
 
-## 'Server - Nodejs'
+### `Server - Nodejs`
 
-## 'Client - React'
+### `Client - React`
 
-## 'Database - MongoDB'
+### `Database - MongoDB`
