@@ -72,7 +72,6 @@ app.post('/api/users/login',(req,res) => {
                 res.cookie("x_auth", user.token) // cookie 파일에 x_auth, 토큰으로 들어감
                 .status(200) // 성공 표시
                 .json({ loginSuccess : true, userId : user._id })
-
             })
         })   
     })
