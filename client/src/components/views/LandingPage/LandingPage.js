@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import axios from 'axios';
+import '../../../App.css';
 // 브라우저에서 node.js 기반 express 모듈 인식 못함
 // import { response } from 'express';
 
@@ -25,18 +26,40 @@ function LandingPage(props) {
     return (
         <div style={{
             display : 'flex', flexDirection : 'column', justifyContent : 'center', alignItems : 'center',
-            width : '100%', height : '100vh'
+            width : '100%', height : '100vh' ,
+            backgroundColor : 'black' , color : 'white'
         }}>
 
-        <form style={{display : 'flex', flexDirection : 'row'}}>
+        <form style={{display : 'flex', flexDirection : 'row', justifyContent : 'flex-end',
+            backgroundColor : '#263343',
+            position : 'absolute', top : '10px',
+            width : '100%', height : '50px'
+        }}>
 
-            <button onClick = {onClickHandler}>
+            <div style = {{
+                position : 'absolute', left : '10px',
+                verticalAlign : 'middle', fontSize : '30px'
+            }}>
+                myBlog
+            </div>
+
+            <div style = {{
+                fontSize : '15px'
+            }}>
+                000님!
+            </div>
+
+            <button style = {{
+                marginLeft : '10px',
+                backgroundColor : 'rgba( 255, 255, 255, 0 )',
+                border : '2px solid white'
+            }} onClick = {onClickHandler}>
                 로그아웃
-            </button>
+            </button>          
 
         </form>
 
-        <h2>시작 페이지</h2>
+        <h2 style = {{color : 'white'}}>시작 페이지</h2>
 
         </div>
     )
