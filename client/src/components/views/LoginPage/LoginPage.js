@@ -30,10 +30,10 @@ function LoginPage(props) {
         // action 함수 실행
         dispatch(loginUser(body))
             .then(response => {
-                if (response.payload.loginSuccess) {
+                if (response.payload.loginSuccess) { // json파일의 loginsuccess 검사
                     props.history.push('/') // 루트 페이지로 컴백
                 } else {
-                    alert('Error˝')
+                    alert('로그인에 실패했습니다.')
                 }
             })
     }

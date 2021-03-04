@@ -30,7 +30,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/users/register',(req, res) => {
-
     // 회원가입 할때 필요한 정보들을 client에서 가져오면 db에 넣어준다.
     
     // id, pw 들어있음 bodyParser -> req body로 클라이언트 정보 전송
